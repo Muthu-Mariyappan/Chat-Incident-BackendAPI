@@ -1,0 +1,79 @@
+[
+  {
+    "IncidentId": "da057526-914d-43e4-ad00-a7c6c24757d8",
+    "IncidentType": 1,
+    "Description": "medical emergency",
+    "SOP": "\"1.Call Police\n\n2.Call Ambulance\n\n3.Call Emergency Number\"",
+    "FWid": 1,
+    "Location": "lucknow",
+    "GeoCoordinates": "55.329111,15.532016",
+    "DateTime": "2020-01-16 10:49:31",
+    "incStatus": "created"
+  },
+  {
+    "IncidentId": "540d60fc-1dcc-44f6-b53d-5a0cc9fcce3b",
+    "IncidentType": 2,
+    "Description": "fire incident",
+    "SOP": "\"1.Call Police\n\n2.Call Ambulance\n\n3.Call Emergency Number\"",
+    "FWid": 2,
+    "Location": "madurai",
+    "GeoCoordinates": "57.163088,64.29034",
+    "DateTime": "2020-01-06 07:06:56",
+    "incStatus": "created"
+  },
+  {
+    "IncidentId": "192f3394-a3f9-41fa-bf77-88b3e1be5679",
+    "IncidentType": 0,
+    "Description": "fire incident",
+    "SOP": "\"1.Call Police\n\n2.Call Ambulance\n\n3.Call Emergency Number\"",
+    "FWid": 3,
+    "Location": "rajkot",
+    "GeoCoordinates": "20.578774,155.989261",
+    "DateTime": "2020-01-28 06:57:48",
+    "incStatus": "created"
+  },
+  {
+    "IncidentId": "aaaea6bf-c168-482f-8975-5304ad73630a",
+    "IncidentType": 1,
+    "Description": "medical emergency",
+    "SOP": "\"1.Call Police\n\n2.Call Ambulance\n\n3.Call Emergency Number\"",
+    "FWid": 4,
+    "Location": "lucknow",
+    "GeoCoordinates": "63.991927,72.10774",
+    "DateTime": "2020-01-04 03:06:30",
+    "incStatus": "created"
+  },
+  {
+    "IncidentId": "c65a7169-dc5a-429a-b85d-e21e743e5282",
+    "IncidentType": 1,
+    "Description": "medical emergency",
+    "SOP": "\"1.Call Police\n\n2.Call Ambulance\n\n3.Call Emergency Number\"",
+    "FWid": 1,
+    "Location": "lucknow",
+    "GeoCoordinates": "80.373476,32.837749",
+    "DateTime": "2020-01-08 01:49:35",
+    "incStatus": "created"
+  },
+  {
+    "IncidentId": "3722200f-07dc-4e60-becc-1222b0edf0a1",
+    "IncidentType": 1,
+    "Description": "fire incident",
+    "SOP": "\"1.Call Police\n\n2.Call Ambulance\n\n3.Call Emergency Number\"",
+    "FWid": 5,
+    "Location": "rajkot",
+    "GeoCoordinates": "27.310702,115.230924",
+    "DateTime": "2020-01-21 01:16:04",
+    "incStatus": "created"
+  },
+  {
+    "IncidentId": "394e5147-7530-4e9b-9ef6-9b637bd8ea42",
+    "IncidentType": 2,
+    "Description": "fire incident",
+    "SOP": "\"1.Call Police\n\n2.Call Ambulance\n\n3.Call Emergency Number\"",
+    "FWid": 6,
+    "Location": "madurai",
+    "GeoCoordinates": "44.980607,10.699167",
+    "DateTime": "2020-01-04 03:02:13",
+    "incStatus": "created"
+  }
+]
