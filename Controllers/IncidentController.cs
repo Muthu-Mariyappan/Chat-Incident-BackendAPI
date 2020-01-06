@@ -38,7 +38,7 @@ namespace IP___Social_Media_Integration___POC.Controllers
         [HttpPut]
         public string UpdateIncident(IncidentRequest incident)
         {
-            new IncidentService().UpdateIncident(incident);
+            var res=new IncidentService().UpdateIncident(incident);
             return "true";
         }
     }

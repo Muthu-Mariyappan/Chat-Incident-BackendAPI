@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IP___Social_Media_Integration___POC.Models;
+using IP___Social_Media_Integration___POC.Json;
 
 namespace IP___Social_Media_Integration___POC.Service
 {
@@ -11,32 +12,23 @@ namespace IP___Social_Media_Integration___POC.Service
     {
         public List<IncidentResponse> GetAllIncident()
         {
-            string json = System.IO.File.ReadAllText(@"Json/Incident.json");
-            var result = JsonConvert.DeserializeObject<List<IncidentResponse>>(json);
-            return result;
+            return jsonclass.incidentResponses;
         }
 
         public List<IncidentResponse> GetIncidentByFieldWorkerId(string id)
         {
-            string json = System.IO.File.ReadAllText(@"Json/Incident.json");
-            var result = JsonConvert.DeserializeObject<List<IncidentResponse>>(json);
-            var incident = result.FindAll(a => a.FWid == id);
+            var incident = jsonclass.incidentResponses.FindAll(a => a.FWid == id);
             return incident;
         }
         public IncidentResponse GetIncidentById(string id)
         {
-            string json = System.IO.File.ReadAllText(@"Json/Incident.json");
-            var result = JsonConvert.DeserializeObject<List<IncidentResponse>>(json);
-            var incident = result.FirstOrDefault(a=>a.IncidentId==id);
+            var incident = jsonclass.incidentResponses.FirstOrDefault(a=>a.IncidentId==id);
             return incident;
         }
 
         public string UpdateIncident(IncidentRequest incident)
         {
-            string json = System.IO.File.ReadAllText(@"Json/Incident.json");
-            var result = JsonConvert.DeserializeObject<List<IncidentResponse>>(json);
-            result.Where(a => a.IncidentId == incident.IncidentId).ToList().ForEach(s => s.incStatus = incident.incStatus);
-            System.IO.File.WriteAllText(@"Json/Incident.Json", JsonConvert.SerializeObject(result));
+            jsonclass.incidentResponses.FirstOrDefault(a => a.IncidentId == incident.IncidentId).incStatus = incident.incStatus;
             return "";
         }
     }
