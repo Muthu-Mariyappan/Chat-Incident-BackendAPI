@@ -22,19 +22,24 @@ namespace IP___Social_Media_Integration___POC.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public IncidentResponse GetIncidentById(string id)
+        public IncidentResponse GetIncidentByID(string id)
         {
-           // field worker for gopi
-            var response = new IncidentService().GetIncident(id);
+            var response = new IncidentService().GetIncidentById(id);
             return response;
         }
-        /*
+
+        [HttpGet]
+        [Route("fwid/{id}")]
+        public List<IncidentResponse> GetFeildWorkerIncidents(string id)
+        {
+            var response = new IncidentService().GetIncidentByFieldWorkerId(id);
+            return response;
+        }
         [HttpPut]
-        public string CreateIncident(IncidentRequest incident)
+        public string UpdateIncident(IncidentRequest incident)
         {
-            var response = new IncidentService().UpdateIncident(incident);
-            return response;
+            new IncidentService().UpdateIncident(incident);
+            return "true";
         }
-        */
     }
 }

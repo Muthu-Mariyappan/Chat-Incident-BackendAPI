@@ -26,6 +26,10 @@ namespace IP___Social_Media_Integration___POC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options => options.AddPolicy("default",builder=>
+            {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,6 +45,8 @@ namespace IP___Social_Media_Integration___POC
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("default");
 
             app.UseEndpoints(endpoints =>
             {

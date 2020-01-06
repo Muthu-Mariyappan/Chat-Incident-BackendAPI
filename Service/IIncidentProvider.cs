@@ -8,9 +8,10 @@ namespace IP___Social_Media_Integration___POC.Service
 {
     public interface IIncidentProvider
     {
-       public IncidentResponse GetIncident(string id);
+       public List<IncidentResponse> GetIncidentByFieldWorkerId(string id);
        public List<IncidentResponse> GetAllIncident();
-       public string CreateIncident(IncidentRequest incident);
+       public string UpdateIncident(IncidentRequest incident);
+       public IncidentResponse GetIncidentById(string id);
 
     }
 }
