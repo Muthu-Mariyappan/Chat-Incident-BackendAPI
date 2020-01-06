@@ -14,21 +14,24 @@ namespace IP___Social_Media_Integration___POC.Service
         {
             return jsonclass.incidentResponses;
         }
-
+		
         public List<IncidentResponse> GetIncidentByFieldWorkerId(string id)
         {
             var incident = jsonclass.incidentResponses.FindAll(a => a.FWid == id);
             return incident;
         }
+		
         public IncidentResponse GetIncidentById(string id)
         {
             var incident = jsonclass.incidentResponses.FirstOrDefault(a=>a.IncidentId==id);
             return incident;
         }
-
+		
         public string UpdateIncident(IncidentRequest incident)
         {
             jsonclass.incidentResponses.FirstOrDefault(a => a.IncidentId == incident.IncidentId).incStatus = incident.incStatus;
+			Console.WriteLine("1." + incident.incStatus);
+            Console.WriteLine("2." + incident.IncidentId); 
             return "";
         }
     }
